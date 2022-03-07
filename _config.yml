@@ -108,15 +108,12 @@ author:
   location         : "Somewhere"
   email            : "sophie@gainge.com"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:sophie@gainge.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://soeuii.github.io/"
+    # - label: "Email"
+    #   icon: "fas fa-fw fa-envelope-square"
+    #   url: "mailto:sophie@gainge.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/soeuii"
+      url: "https://github.com/soeuii"
 
 # Site Footer
 footer:
@@ -129,7 +126,7 @@ footer:
     #   # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/soeuii"
+      url: "https://github.com/soeuii"
 
 
 
