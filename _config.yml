@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "소소한 기록"
+title                    : "Soeui Log"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "soeui"
-description              : "An amazing website."
+description              : "나의 공부 기록"
 url                      : "https://soeuii.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -102,9 +102,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Soeui"
+  name             : "Soeui Lee"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Do everything in love!"
+  bio              : "Do everything in love."
   location         : "Somewhere"
   email            : "sophie@gainge.com"
   links:
@@ -266,8 +266,8 @@ defaults:
       author_profile: true
       read_time: true
       comments: # true
-      share: true
-      related: true
+      share: false
+      related: false
       show_date: true
       date_format: "%Y-%m-%d"
 
