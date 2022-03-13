@@ -51,11 +51,13 @@
      ========================================================================== */
 
 .pagination {
-  @include clearfix();
+  // @include clearfix();
   float: left;
   margin-top: 1em;
   padding-top: 1em;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 
   ul {
     margin: 0;
@@ -120,31 +122,31 @@
   /* next/previous buttons */
   &--pager {
     display: block;
-    padding: 1em 2em;
-    float: left;
-    width: 50%;
+    // padding: 1em 2em;
+    // float: left;
+    // width: 50%;
     font-family: $sans-serif;
     font-size: $type-size-5;
     font-weight: bold;
-    text-align: center;
+    // text-align: center;
     text-decoration: none;
     color: $muted-text-color;
-    border: 1px solid mix(#000, $border-color, 25%);
-    border-radius: $border-radius;
+    // border: 1px solid mix(#000, $border-color, 25%);
+    // border-radius: $border-radius;
 
     &:hover {
-      @include yiq-contrasted($muted-text-color);
+      // @include yiq-contrasted($muted-text-color);
     }
 
     &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+      // border-top-right-radius: 0;
+      // border-bottom-right-radius: 0;
     }
 
     &:last-child {
-      margin-left: -1px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      // margin-left: -1px;
+      // border-top-left-radius: 0;
+      // border-bottom-left-radius: 0;
     }
 
     &.disabled {
@@ -152,8 +154,47 @@
       pointer-events: none;
       cursor: not-allowed;
     }
+    
+    &.previous:before {
+      content: ' ';
+      border: solid #646769;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 4px;
+      margin-right: 8px;
+      transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+
+      &:hover {
+        border-color: $point-color;
+      }
+
+      &.disabled{
+        border-color: rgba(100,103,105,0.5);
+      }
+    }
+
+    &.next:after {
+      content: ' ';
+      border: solid #787878;
+      border-width: 0 2px 2px 0;
+      display: inline-block;
+      padding: 4px;
+      margin-left: 8px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+
+      &:hover {
+        border-color: $point-color;
+      }
+      
+      &.disabled{
+        border-color: rgba(100,103,105,0.5);
+      }
+    }
   }
 }
+
 
 .page__content + .pagination,
 .page__meta + .pagination,
@@ -243,7 +284,7 @@
         left: 0;
         bottom: 0;
         height: 3px;
-        background: $masthead-link-color-hover;
+        background: $point-color;
         width: 100%;
         -webkit-transition: $global-transition;
         transition: $global-transition;
@@ -482,7 +523,7 @@
 
 .nav__title {
   margin: 0;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0 0.75rem;
   font-family: $sans-serif-narrow;
   font-size: $type-size-5;
   font-weight: bold;
@@ -505,19 +546,23 @@
 
 .toc {
   font-family: $sans-serif-narrow;
-  color: $gray;
-  background-color: $background-color;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
+  // color: $gray;
+  // background-color: $background-color;
+  // border: 1px solid $border-color;
+  // border-radius: $border-radius;
+  // -webkit-box-shadow: $box-shadow;
+  // box-shadow: $box-shadow;
 
   .nav__title {
-    color: #fff;
+    color: $main-color;
     font-size: $type-size-6;
-    background: $primary-color;
+    // background: $primary-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
+
+    .fa-file-alt:before {
+      color: $main-color
+    }
   }
 
   // Scrollspy marks toc items as .active when they are in focus
@@ -532,7 +577,7 @@
   width: 100%;
   list-style: none;
   font-size: $type-size-6;
-
+  
   @include breakpoint($large) {
     font-size: $type-size-7;
   }
@@ -543,11 +588,15 @@
     color: $muted-text-color;
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
+    // border-bottom: 1px solid $border-color;
 
     &:hover {
       color: $text-color;
     }
+  }
+
+  > li {
+    border-left: 0.5px solid $main-color;
   }
 
   li ul > li a {
