@@ -154,9 +154,9 @@
       pointer-events: none;
       cursor: not-allowed;
     }
-    
+
     &.previous:before {
-      content: ' ';
+      content: " ";
       border: solid #646769;
       border-width: 0 2px 2px 0;
       display: inline-block;
@@ -169,13 +169,13 @@
         border-color: $point-color;
       }
 
-      &.disabled{
-        border-color: rgba(100,103,105,0.5);
+      &.disabled {
+        border-color: rgba(100, 103, 105, 0.5);
       }
     }
 
     &.next:after {
-      content: ' ';
+      content: " ";
       border: solid #787878;
       border-width: 0 2px 2px 0;
       display: inline-block;
@@ -187,14 +187,13 @@
       &:hover {
         border-color: $point-color;
       }
-      
-      &.disabled{
-        border-color: rgba(100,103,105,0.5);
+
+      &.disabled {
+        border-color: rgba(100, 103, 105, 0.5);
       }
     }
   }
 }
-
 
 .page__content + .pagination,
 .page__meta + .pagination,
@@ -277,6 +276,7 @@
 
     a {
       position: relative;
+      font-weight: 500;
 
       &:before {
         content: "";
@@ -561,7 +561,7 @@
     border-top-right-radius: $border-radius;
 
     .fa-file-alt:before {
-      color: $main-color
+      color: $main-color;
     }
   }
 
@@ -577,7 +577,7 @@
   width: 100%;
   list-style: none;
   font-size: $type-size-6;
-  
+
   @include breakpoint($large) {
     font-size: $type-size-7;
   }
@@ -617,6 +617,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }
